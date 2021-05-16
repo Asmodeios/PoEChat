@@ -5,3 +5,5 @@ Clone repository and run ``npm install`` in terminal of project's directory
 ```javascript
 var tail = new Tail(process.env.CLIENT_PATH);
 ```
+## Start
+In order to start write ``npm start`` in the terminal
