@@ -2,14 +2,15 @@ var express = require('express');
 var socket = require('socket.io');
 var Tail = require('tail').Tail;
 var http = require('http');
-const path = ""
-var tail = new Tail("C:/Program Files (x86)/Grinding Gear Games/Path of Exile/logs/Client.txt");
+require('dotenv').config();
 
+
+var tail = new Tail(process.env.CLIENT_PATH);
 
 
 var app = express();
 var server = http.createServer(app);
-server.listen(4000, '192.168.0.192', () => {
+server.listen(4000, process.env.IP, () => {
   console.log('listening to requests on port 4000');
 });
 
