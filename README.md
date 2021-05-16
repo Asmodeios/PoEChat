@@ -7,5 +7,7 @@ var tail = new Tail(process.env.CLIENT_PATH);
 ```
 ## Start
 In order to start write ``npm start`` in the terminal
+
 Then open Command Prompt(cmd) on your pc to run command ``ipconfig`` and find your ``IPv4 Address. . . . . . . . . . . : xxx.xxx.xxx.xxx``
+
 Open browser and go to ``yourIPv4address:4000``
