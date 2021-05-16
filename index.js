@@ -2,15 +2,27 @@ var express = require('express');
 var socket = require('socket.io');
 var Tail = require('tail').Tail;
 var http = require('http');
+var os = require('os');
 require('dotenv').config();
 
 
 var tail = new Tail(process.env.CLIENT_PATH);
+var networkInterfaces = os.networkInterfaces();
+var localIP;
 
+for (const name of Object.keys(networkInterfaces)) {
+  for (const networks of networkInterfaces[name]) {
+     // Skip over non-IPv4 and internal (i.e. 127.0.0.1) addresses
+     if (networks.family === 'IPv4' && !networks.internal) {
+      localIP = networks.address;
+      break;
+    }
+  }
+}
 
 var app = express();
 var server = http.createServer(app);
-server.listen(4000, process.env.IP, () => {
+server.listen(4000, localIP, () => {
   console.log('listening to requests on port 4000');
 });
 
