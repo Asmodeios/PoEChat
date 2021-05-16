@@ -1,0 +1,80 @@
+body {
+  background-color: rgba(48, 47, 47, 0.911);
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: blue;
+  text-decoration: none; /* no underline */
+}
+
+#list {
+  height: 60%;
+  width: 100%;
+  overflow-y: auto;
+  border-radius: 25px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.time {
+  font-weight: bold;
+}
+
+.buy {
+  color: #ff3919;
+  font-weight: 900;
+}
+
+.clear {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 999;
+}
+
+#list::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+#list::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+#list::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #D62929;
+}
+
+@media only screen and (max-width: 600px) {
+  #list {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    padding: 0;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.container-sm {
+  height: 100%;
+}
