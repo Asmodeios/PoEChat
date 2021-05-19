@@ -6,11 +6,8 @@ Clone repository and run ``npm install`` in terminal of project's directory
 
 In ```index.js``` if your path to Client.txt is not default (C:/Program Files (x86)/Grinding Gear Games/Path of Exile/logs/Client.txt), you should specify your own instead of ``process.env.CLIENT_PATH``
 ```javascript
-var tail = new Tail(process.env.CLIENT_PATH);
+var tail = new Tail("C:/YourPoEFolder/logs/Client.txt");
 ```
 ## Start
 In order to start write ``npm start`` in the terminal
-
-Then open Command Prompt(cmd) on your pc to run command ``ipconfig`` and find your ``IPv4 Address. . . . . . . . . . . : xxx.xxx.xxx.xxx``
-
-Open browser and go to ``yourIPv4address:4000``
+In console you'll see ``link to chat: IPaddress:4000`` and you can navigate to your chat monitor using this link in browser
