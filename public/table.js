@@ -1,4 +1,4 @@
-var socket = io.connect(`ws://${process.env.IP}:4000`);
+var socket = io.connect(`ws://${window.location.host}`);
 let $list = $('#list');
 
 const clearChat = () => {
@@ -20,7 +20,7 @@ socket.on('newMessage', (message) => {
     html: time,
   })).css({'display': 'flex', 'gap': '1rem'});
 
-  const isBuy = /Hi, I would like to buy your.+/.test(text);
+  const isBuy = /^@From.+Hi, I would|I'd like to buy your.+/.test(text);
 
   $element.append($('<div>', {
     'class': isBuy ? 'buy' : 'text',
