@@ -5,8 +5,9 @@ var http = require('http');
 var os = require('os');
 require('dotenv').config();
 
+var options= {separator: /[\r]{0,1}\n/, fromBeginning: false, fsWatchOptions: {}, follow: true, logger: console, useWatchFile: true}
 
-var tail = new Tail(process.env.CLIENT_PATH);
+var tail = new Tail(process.env.CLIENT_PATH, options);
 var networkInterfaces = os.networkInterfaces();
 var localIP;
 

@@ -1,4 +1,4 @@
-var socket = io.connect('http://192.168.0.192:4000');
+var socket = io.connect(`ws://${process.env.IP}:4000`);
 let $list = $('#list');
 
 const clearChat = () => {
