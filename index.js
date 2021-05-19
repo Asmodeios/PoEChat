@@ -24,7 +24,7 @@ for (const name of Object.keys(networkInterfaces)) {
 var app = express();
 var server = http.createServer(app);
 server.listen(4000, localIP, () => {
-  console.log('listening to requests on port 4000');
+  console.log(`link to chat: ${localIP}:4000`);
 });
 
 app.use(express.static('public'));
