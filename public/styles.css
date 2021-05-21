@@ -63,6 +63,25 @@ a {
   background-color: #D62929;
 }
 
+.container-sm {
+  height: 100%;
+}
+
+.auto-clear {
+  display: flex;
+  color: white;
+  width: 30%;
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  z-index: 999;
+  align-items: center;
+}
+
+.auto-clear span {
+  margin-right: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   #list {
     height: 100%;
@@ -73,8 +92,4 @@ a {
     display: flex;
     flex-direction: column;
   }
-}
-
-.container-sm {
-  height: 100%;
 }

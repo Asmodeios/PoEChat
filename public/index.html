@@ -13,6 +13,11 @@
   </head>
   <body>
     <button type="button" class="btn btn-dark clear" onClick="clearChat()"">Clear chat</button>
+    <div class="input-group mb-3 auto-clear">
+      <span class="input-group-number" id="basic-addon1">Auto clear in:</span>
+      <input type="number" class="form-control" id="auto-clear" placeholder="Specify auto-clear in minutes" aria-label="time">
+      <button type="button" class="btn btn-dark auto-clear-btn" onClick="autoClear()"">Set auto clear</button>
+    </div>
     <div class="container-sm">
       <div class="list-group" id="list">
       </div>
