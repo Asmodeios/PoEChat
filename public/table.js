@@ -36,7 +36,7 @@ socket.on('newMessage', (message) => {
     html: time,
   })).css({'display': 'flex', 'gap': '1rem'});
 
-  const isBuy = /^@From|To.+Hi, I would|I'd like to buy your.+/.test(text);
+  const isBuy = /^@From.+Hi, I would|I'd like to buy your.+/.test(text);
 
   $element.append($('<div>', {
     'class': isBuy ? 'buy' : 'text',
